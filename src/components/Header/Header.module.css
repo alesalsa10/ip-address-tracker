@@ -1,0 +1,21 @@
+.header{
+    background-image: url('./pattern-bg.png');
+}
+
+h1{
+    margin-top: 0;
+    color:white;
+    text-align: center;
+}
+
+.searchBar{
+    text-align: center;
+}
+
+.search{
+    padding-left: 1rem;
+    width: 300px;
+    border-radius: 10px;
+    height: 35px;
+    margin-bottom: 5rem;
+}
