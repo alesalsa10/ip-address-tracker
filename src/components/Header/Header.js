@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from './Header.module.css';
 import { getIPInfo } from '../../api/hooks';
 import IPInfo from '../IPInfo/IPInfo';
+import Map from '../Map/Map';
 
 export default function Header() {
   const [data, setData] = useState();
@@ -10,6 +11,7 @@ export default function Header() {
     async function fetchIPInfo() {
       const response = await getIPInfo();
       setData(response);
+      console.log(response);
     }
     fetchIPInfo();
   }, []);
@@ -27,14 +29,17 @@ export default function Header() {
         </div>
       </div>
       {data && (
-        <IPInfo
-          IPAddress={data.ip}
-          city={data.location.city}
-          state={data.location.region}
-          zipcode={data.location.postalCode}
-          timezone={data.location.timezone}
-          isp={data.isp}
-        />
+        <div>
+          <IPInfo
+            IPAddress={data.ip}
+            city={data.location.city}
+            state={data.location.region}
+            zipcode={data.location.postalCode}
+            timezone={data.location.timezone}
+            isp={data.isp}
+          />
+          <Map latitude={data.location.lat} longitude={data.location.lng} />
+        </div>
       )}
     </div>
   );
