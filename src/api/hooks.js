@@ -6,8 +6,19 @@ export const getIPInfo = async () => {
   try {
     const response = await axios.get(`
         https://geo.ipify.org/api/v1?apiKey=${key}`);
-    return response.data
+    return response.data;
   } catch (error) {
     console.log('error', error);
+  }
+};
+
+export const searchIP = async (ip) => {
+  try {
+    const response = await axios.get(
+      `https://geo.ipify.org/api/v1?apiKey=${key}&ipAddress=${ip}`
+    );
+    return response.data;
+  }catch(error){
+    console.log('error', error)
   }
 };
