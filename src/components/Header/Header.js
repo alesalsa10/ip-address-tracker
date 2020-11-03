@@ -9,7 +9,6 @@ export default function Header() {
   useEffect(() => {
     async function fetchIPInfo() {
       const response = await getIPInfo();
-      console.log(response);
       setData(response);
     }
     fetchIPInfo();

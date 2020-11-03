@@ -1,5 +1,6 @@
 .header{
     background-image: url('./pattern-bg.png');
+    background-size: cover;
 }
 
 h1{
