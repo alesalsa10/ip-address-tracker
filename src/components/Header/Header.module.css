@@ -3,6 +3,7 @@
     background-size: cover;
 }
 
+
 h1{
     margin-top: 0;
     color:white;
@@ -19,4 +20,16 @@ h1{
     border-radius: 10px;
     height: 35px;
     margin-bottom: 5rem;
+}
+
+@media only screen and (max-width: 600px){
+    .header{
+        height: 400px;
+    }
+    h1{
+        padding-top: 2rem;
+    }
+    .search{
+        width: 75%;
+    }
 }

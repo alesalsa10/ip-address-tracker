@@ -11,3 +11,26 @@
     width: fit-content;
     z-index: 3;
 }
+.card > div {
+    border-right: 1px solid rgb(151, 149, 149);
+    padding-left: 0.5rem;
+}
+ #isp{
+     border-right: none;
+ }
+
+@media only screen and (max-width: 600px){
+    .card{
+        display: block;
+        width: 70%;
+        height: 400px;
+        margin-top: -216px;
+    }
+    .card > div {
+        border-bottom: 1px solid rgb(151, 149, 149);
+        border-right: none;
+    }
+    #isp{
+        border-bottom: none;
+    }
+}

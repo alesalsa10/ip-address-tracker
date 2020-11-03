@@ -9,19 +9,19 @@ export default function IPInfo({ IPAddress, city, state, zipcode, timezone, isp 
     <div className={styled.card}>
       <div className={styled.IPAddress}>
         <p>IP ADDRESS</p>
-        <p> {IPAddress} </p>
+        <h4> {IPAddress} </h4>
       </div>
       <div className={styled.location}>
         <p>LOCATION</p>
-        <p> {city}, {state} {zipcode} </p>
+        <h4> {city}, {state} {zipcode} </h4>
       </div>
       <div className={styled.timezone}>
         <p>TIMEZONE</p>
-        <p> UTC {timezone} </p>
+        <h4> UTC {timezone} </h4>
       </div>
-      <div className={styled.isp}>
+      <div id={styled.isp}>
         <p>ISP</p>
-        <p> {isp} </p>
+        <h4> {isp} </h4>
       </div>
     </div>
   );
